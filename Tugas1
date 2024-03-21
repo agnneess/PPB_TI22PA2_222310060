@@ -1,0 +1,43 @@
+import React from 'react';
+import { View, StyleSheet, Text, Image } from 'react-native';
+
+const Biodata = () => {
+    return (
+        <View style={styles.container}>
+            <Image
+                style={styles.image}
+                source={require('../assets/photoprofile.jpg')}
+            />
+            <Text style={styles.title}>My Profile</Text>
+            <View style={styles.textContainer}>
+                <Text>Nama  : Agnes Abigael Wijaya</Text>
+                <Text>NPM   : 222310060</Text>
+                <Text>Kelas : TI22PA</Text>
+            </View>
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: 50,
+    },
+    image: {
+        width: 150,
+        height: 150,
+        marginBottom: 20,
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 20,
+    },
+    textContainer: {
+        alignItems: 'flex-start', // Align text to the left
+        justifyContent: 'center',
+    },
+});
+
+export default Biodata;
